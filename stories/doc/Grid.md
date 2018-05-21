@@ -26,7 +26,7 @@ className | string   |         | css class name of the element
 ### Normal Grid
 
 ```js
-import {Grid} from 'react-pure-css'
+import {Grid} from '@commenthol/react-pure-css'
 const {Unit} = Grid
 
 render () {
@@ -43,7 +43,7 @@ render () {
 ### Responsive Grid
 
 ```js
-import {Grid} from 'react-pure-css'
+import {Grid} from '@commenthol/react-pure-css'
 const {Unit} = Grid
 
 render () {

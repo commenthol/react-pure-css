@@ -15,7 +15,7 @@ plus all attributes from [`<select>`](https://developer.mozilla.org/en-US/docs/W
 ## Usage
 
 ```js
-import {Select} from 'react-pure-css'
+import {Select} from '@commenthol/react-pure-css'
 
 const options = [
   {value: 'one', label: 'One'},

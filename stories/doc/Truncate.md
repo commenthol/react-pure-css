@@ -6,7 +6,7 @@ Renders as `<div>`.
 ## Usage
 
 ```js
-import {Truncate} from 'react-pure-css'
+import {Truncate} from '@commenthol/react-pure-css'
 
 render () {
   return (

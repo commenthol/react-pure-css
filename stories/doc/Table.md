@@ -14,7 +14,7 @@ plus all attributes from [`<table>`](https://developer.mozilla.org/en-US/docs/We
 ## Usage
 
 ```js
-import {Table} from 'react-pure-css'
+import {Table} from '@commenthol/react-pure-css'
 
 render () {
   return (

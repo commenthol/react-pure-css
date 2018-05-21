@@ -1,6 +1,6 @@
 {
-  "name": "react-pure-css",
-  "version": "0.1.0",
+  "name": "@commenthol/react-pure-css",
+  "version": "0.1.1",
   "description": "pure.css components for react",
   "keywords": [],
   "license": "MIT",
