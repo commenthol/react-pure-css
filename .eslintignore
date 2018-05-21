@@ -1,0 +1,6 @@
+coverage/
+dist/
+docs*/
+scripts/jsdoc/*
+tmp/
+lib/

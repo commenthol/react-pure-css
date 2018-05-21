@@ -1,0 +1,24 @@
+
+.dialog__backdrop {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: var(--dialog__backdrop--backgroundColor, rgba(0,0,0,.5));
+}
+
+.dialog__content {
+  position: fixed;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 3px 9px rgba(0,0,0,.5);
+  background-clip: padding-box;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 95vw;
+  max-height: 95vh;
+}

@@ -1,0 +1,20 @@
+.pure-button-xs {
+  font-size: 70%;
+}
+
+.pure-button-s {
+  font-size: 85%;
+}
+
+.pure-button-l {
+  font-size: 110%;
+}
+
+.pure-button-xl {
+  font-size: 125%;
+}
+
+.pure-button-secondary {
+  background-color: var(--button--secondary--backgroundColor, rgb(66, 184, 221));
+  color: var(--button--secondary--color, #fff);
+}

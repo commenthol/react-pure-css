@@ -1,0 +1,11 @@
+{
+  "extends": ["standard", "standard-react"],
+  "parser": "babel-eslint",
+  "rules": {
+    "react/prop-types": "off"
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  }
+}

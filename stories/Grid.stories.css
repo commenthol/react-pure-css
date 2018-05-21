@@ -1,0 +1,29 @@
+.grid__responsive .pure-u,
+.grid__normal .pure-u {
+  border: 1px solid #ccc;
+  color: #777;
+  font-weight: bold;
+  padding: 1em;
+  text-align: center;
+}
+
+.grids__unit {
+  margin: 0.25em 0;
+  padding-left: 4.5em;
+}
+.grids__unit_width {
+    width: 4em;
+    margin-left: -4.5em;
+    padding-right: 0.5em;
+    line-height: 2em;
+    text-align: right;
+    vertical-align: baseline;
+}
+.grids__unit_details {
+  position: relative;
+  background: #fafafa;
+}
+.grids__unit_bar {
+  height: 2em;
+  background: #eee;
+}

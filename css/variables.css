@@ -1,0 +1,30 @@
+:root {
+  /* buttons */
+  --button--color: rgba(0, 0, 0, 0.80);
+  --button--backgroundColor: rgb(230, 230, 230);
+  --button--primary--color: #fff;
+  --button--primary--backgroundColor: rgb(0, 120, 231);
+  --button--secondary--color: #fff;
+  --button--secondary--backgroundColor: rgb(66, 184, 221);
+
+  /* forms */
+  --form--disabled--color: #cad2d3;
+  --form--disabled--backgroundColor: #eaeded;
+  --checkbox--disabled--color:rgb(119, 119, 119);
+  --radio--disabled--color:rgb(119, 119, 119);
+
+  /* menus */
+  --menu__separator--backgroundColor: #ccc;
+  --menu__heading--color: rgb(86, 93, 100);
+  --menu__link--color: rgb(119, 119, 119);
+  --menu__link--backgroundColorHover: rgb(238, 238, 238);
+
+  --menu__children--backgroundColor: #fff;
+  --menu__selected--color: #000;
+  --menu__selected--backgroundColor: transparent;
+  --menu__children--backgroundColor: #fafafa;
+  --pure-menu-divided--borderColor: rgb(218, 218, 218);
+
+  /* drawer */
+  --drawer__backdrop--backgroundColor: rgba(0, 0, 0, .5)
+}

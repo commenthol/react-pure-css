@@ -1,0 +1,10 @@
+node_modules/
+test/
+stories/
+tmp/
+*.log
+*.tgz
+.*
+yarn.lock
+storybook-static/
+

@@ -1,0 +1,45 @@
+.menu_restriced_width {
+  /* To limit the menu width to the content of the menu: */
+  display: inline-block;
+  /* Or set the width explicitly: */
+  /* width: 10em; */
+}
+
+.menu_restriced_width_height {
+  display: inline-block;
+  height: 10em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* ---- */
+
+.menu_color {
+  width: 100%;
+  background-color: #dde;
+}
+
+.menu_color .pure-menu-selected .pure-menu-link:hover,
+.menu_color .pure-menu-selected {
+  background-color: #99a;
+}
+
+.menu_img {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.menu_img .pure-menu-heading img {
+  border-radius: 50% 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 80px;
+  padding: 10px 0px;
+}
+
+.menu_img .pure-menu-link {
+  line-height: 80px;
+  padding-top: 0;
+  padding-bottom: 0;
+}

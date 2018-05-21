@@ -1,0 +1,10 @@
+
+.body {
+  padding: 1em;
+}
+
+h4 {
+  padding: 1em 1em 0em;
+  border-bottom: 1px dashed #999;
+  color: #999;
+}

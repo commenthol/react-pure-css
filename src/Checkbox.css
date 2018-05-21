@@ -1,0 +1,7 @@
+.pure-form .pure-checkbox-disabled {
+  color: var(--checkbox--disabled--color, rgb(119, 119, 119));
+}
+
+.pure-form .pure-checkbox input {
+  display: inline-block;
+}

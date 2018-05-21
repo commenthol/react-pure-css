@@ -1,0 +1,7 @@
+.pure-form .pure-radio-disabled {
+  color: var(--radio--disabled--color, rgb(119, 119, 119));
+}
+
+.pure-form .pure-radio input {
+  display: inline-block;
+}
