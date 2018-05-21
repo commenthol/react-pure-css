@@ -9,5 +9,4 @@ dist/
 *.tgz
 yarn.lock
 package-lock.json
-storybook-static/
 
