@@ -11,7 +11,7 @@ className | string   | css class name of the element
 ## Usage
 
 ```js
-import {Dialog} from 'react-pure-css'
+import {Dialog} from '@commenthol/react-pure-css'
 
 render () {
   const {show} = this.state

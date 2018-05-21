@@ -18,7 +18,7 @@ plus all attributes from [`<button>`](https://developer.mozilla.org/en-US/docs/W
 ## Usage
 
 ```js
-import {Button} from 'react-pure-css'
+import {Button} from '@commenthol/react-pure-css'
 
 render () {
   return (

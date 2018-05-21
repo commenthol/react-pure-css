@@ -12,7 +12,7 @@ className | string   |         | css class name of the element
 ## Usage
 
 ```js
-import {Drawer} from 'react-pure-css'
+import {Drawer} from '@commenthol/react-pure-css'
 
 render () {
   const {show} = this.state

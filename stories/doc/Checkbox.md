@@ -17,7 +17,7 @@ plus all attributes from [`<input type="checkbox">`](https://developer.mozilla.o
 ## Usage
 
 ```js
-import {Form, Checkbox} from 'react-pure-css'
+import {Form, Checkbox} from '@commenthol/react-pure-css'
 
 render () {
   return (

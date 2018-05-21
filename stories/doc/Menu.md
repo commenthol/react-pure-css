@@ -64,7 +64,7 @@ className | string   | css class name of the element
 ## Usage
 
 ```js
-import {Menu} from 'react-pure-css'
+import {Menu} from '@commenthol/react-pure-css'
 
 render () {
   return (

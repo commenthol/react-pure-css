@@ -18,7 +18,7 @@ plus all attributes from [`<input type="radio">`](https://developer.mozilla.org/
 ## Usage
 
 ```js
-import {Form, RadioButton} from 'react-pure-css'
+import {Form, RadioButton} from '@commenthol/react-pure-css'
 
 render () {
   return (

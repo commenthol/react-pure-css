@@ -1,10 +1,12 @@
-# react-pure-css
+# @commenthol/react-pure-css
 
 > pure.css with react components
 
+https://commenthol.github.io/react-pure-css/
+
 ## install
 
-    npm i -S react-pure-css
+    npm i -S @commenthol/react-pure-css
 
 ## usage
 
@@ -12,15 +14,15 @@ Check the `*.stories.js` files under `./storybook` for the time being.
 
 ## customisation
 
-Use a copy of `react-pure-css/css/variables.css` for custom vars.
+Use a copy of `@commenthol/react-pure-css/css/variables.css` for custom vars.
 Then add it to your project like this:
 
 ```js
-// copy import 'react-pure-css/css/variables.css'
+// copy import '@commenthol/react-pure-css/css/variables.css'
 import './variables.css'
-import 'react-pure-css/css/base.css'
+import '@commenthol/react-pure-css/css/base.css'
 
-import {Form, Input, ...} from 'react-pure-css'
+import {Form, Input, ...} from '@commenthol/react-pure-css'
 ```
 
 ## license

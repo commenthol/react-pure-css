@@ -13,7 +13,7 @@ plus all attributes from [`<form>`](https://developer.mozilla.org/en-US/docs/Web
 ## Usage
 
 ```js
-import {Form, Checkbox, Input} from 'react-pure-css'
+import {Form, Checkbox, Input} from '@commenthol/react-pure-css'
 
 render () {
   return (
@@ -60,7 +60,7 @@ Group single form field (e.g. label, input and form message)
 ## Usage
 
 ```js
-import {Form, Input} from 'react-pure-css
+import {Form, Input} from '@commenthol/react-pure-css
 
 render () {
   <Form.ControlGroup>
