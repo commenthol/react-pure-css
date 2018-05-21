@@ -1,6 +1,7 @@
 export {default as Button} from './Button'
 export {default as ButtonGroup} from './ButtonGroup'
 export {default as Checkbox} from './Checkbox'
+export {default as Datalist} from './Datalist'
 export {default as Dialog} from './Dialog'
 export {default as Drawer} from './Drawer'
 export {default as Form} from './Form'
