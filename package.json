@@ -3,9 +3,17 @@
   "version": "0.1.1",
   "description": "pure.css components for react",
   "keywords": [],
+  "homepage": "https://github.com/commenthol/react-pure-css#readme",
+  "bugs": {
+    "url": "https://github.com/commenthol/react-pure-css/issues"
+  },
   "license": "MIT",
   "author": "commenthol <commenthol@gmail.com>",
   "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/commenthol/react-pure-css.git"
+  },
   "scripts": {
     "all": "npm run clean && npm run lint && npm run build && npm test",
     "build": "npm run clean && webpack -p",
