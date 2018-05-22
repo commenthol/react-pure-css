@@ -13,10 +13,16 @@ export default class Select extends Component {
 
   _onChange (ev) {
     const {onChange} = this.props
-    const {selectedOptions} = ev.target
+    const {selectedOptions, options} = ev.target
     const values = []
-    for (let opt of selectedOptions) {
-      values.push(opt.value)
+    if (selectedOptions) {
+      for (let i = 0; i < selectedOptions.length; i++) { // Edge15 can't handle for of loop
+        values.push(selectedOptions[i].value)
+      }
+    } else {
+      for (let i = 0; i < options.length; i++) { // IE11 fallback
+        if (options[i].selected) values.push(options[i].value)
+      }
     }
     onChange && onChange(ev, values)
   }
@@ -43,8 +49,8 @@ export default class Select extends Component {
     other.onChange = this._onChange
 
     return [
-      label && <label htmlFor={this._id}>{label}</label>,
-      <select {...other}>
+      label && <label key={0} htmlFor={this._id}>{label}</label>,
+      <select key={1} {...other}>
         {_options.length
           ? _options
           : children
