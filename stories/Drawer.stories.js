@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 import { withReadme } from 'storybook-readme'
 import readme from './doc/Drawer.md'
 import {stop} from './common'
@@ -24,7 +25,10 @@ storiesOf('pure.css', module)
             <Form.Group>
               <Select label='position' value={position}
                 options={['left', 'right', 'top', 'bottom']}
-                onChange={(ev, values) => this.setState({position: values[0]})} />
+                onChange={(ev, values) => {
+                  action('onChange')(ev, values)
+                  this.setState({position: values[0]})
+                }} />
               <br />
               <Input label='number' type='number' value={number} onChange={(ev) => {
                 const number = toNumber(ev.target.value, 0, 100)

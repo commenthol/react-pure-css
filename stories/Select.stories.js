@@ -19,6 +19,27 @@ const json = (value) => JSON.stringify(value)
 class SelectControlled extends Component {
   constructor () {
     super()
+    this.state = { value: 'two' }
+  }
+  render () {
+    return (
+      <Form stacked onSubmit={stop}>
+        <Select
+          options={options}
+          value={this.state.value}
+          onChange={(ev, values) => {
+            action('select single')(json(values))
+            this.setState({value: values[0]})
+          }}
+        />
+      </Form>
+    )
+  }
+}
+
+class SelectControlledMultiple extends Component {
+  constructor () {
+    super()
     this.state = { values: ['two', 'three'] }
   }
   render () {
@@ -77,7 +98,9 @@ storiesOf('pure.css', module)
       </Form>
 
       <h4>Select (controlled)</h4>
-
       <SelectControlled />
+
+      <h4>Select multiple (controlled)</h4>
+      <SelectControlledMultiple />
     </div>
   )))
