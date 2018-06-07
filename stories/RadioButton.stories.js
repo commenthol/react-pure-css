@@ -44,10 +44,10 @@ storiesOf('pure.css', module)
   .add('RadioButton', withReadme(readme, () => (
     <div>
       <Form onSubmit={stop}>
-        <RadioButton>Default radio button</RadioButton>
-        <RadioButton defaultChecked>Checked radio button</RadioButton>
-        <RadioButton disabled>Disabled radio button</RadioButton>
-        <RadioButton disabled defaultChecked>Disabled checked radio button</RadioButton>
+        <RadioButton name='radio' value='1'>Default radio button</RadioButton>
+        <RadioButton name='radio' value='2' defaultChecked>Checked radio button</RadioButton>
+        <RadioButton name='radiod' value='3' disabled>Disabled radio button</RadioButton>
+        <RadioButton name='radiod' value='4' disabled defaultChecked>Disabled checked radio button</RadioButton>
       </Form>
 
       <h4>RadioButton (controlled)</h4>

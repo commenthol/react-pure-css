@@ -38,7 +38,7 @@ class DatalistControlled extends Component {
 
 storiesOf('pure.css', module)
   .add('Datalist', withReadme(readme, () => (
-    <Form stacked onSubmit={(ev) => action('submit')(submit(ev))}>
+    <Form stacked onSubmit={(ev, send) => action('submit')(submit(ev, send))}>
       <Datalist
         label='required'
         name='uncontrolled'

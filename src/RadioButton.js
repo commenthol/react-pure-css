@@ -26,9 +26,9 @@ export default class RadioButton extends Component {
     } = this.props
     this._id = id || this._id
     const _className = classnames(className, radioClass, addClass(radioClass)({disabled: other.disabled}))
-    if (!other.defaultChecked && !other.checked) {
+    if (checkedValue) {
       // controlled component using checkedValue
-      other.checked = !!(checkedValue && checkedValue === other.value)
+      other.checked = (checkedValue === other.value)
     }
     return (
       <label htmlFor={this._id} className={_className}>

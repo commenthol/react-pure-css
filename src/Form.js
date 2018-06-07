@@ -15,9 +15,30 @@ export default function Form (props) {
     aligned,
     className,
     children,
+    onSubmit,
     ...other
   } = props
   other.className = classnames(className, formClass, _addClass({stacked, aligned}))
+  // wraps onSubmit to return send params
+  other.onSubmit = (ev) => {
+    const send = {}
+    for (let i = 0; i < ev.target.elements.length; i++) {
+      const {name, value, checked, type} = ev.target.elements[i]
+      if (name && value !== undefined && value !== '') {
+        let v = value
+        switch (type) {
+          case 'checkbox':
+            v = checked ? 'on' : undefined // force same behavior as with noscript form submission
+            break
+          case 'radio':
+            v = checked ? value : undefined
+            break
+        }
+        if (v) send[name] = v
+      }
+    }
+    onSubmit && onSubmit(ev, send)
+  }
   return (
     <form {...other}>
       {children}
