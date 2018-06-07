@@ -25,6 +25,15 @@ storiesOf('pure.css', module)
         <Button primary onSubmit={stop}>Sign in</Button>
       </Form>
 
+      <h4>lengths</h4>
+
+      <Form>
+        <Input u='1-4' placeholder="u='1-4'" /><br />
+        <Input u='1-2' placeholder="u='1-2'" /><br />
+        <Input u='3-4' placeholder="u='3-4'" /><br />
+        <Input u='1' placeholder="u='1'" /><br />
+      </Form>
+
       <h4>rounded input</h4>
 
       <Form onSubmit={stop}>

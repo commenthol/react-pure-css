@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { withReadme } from 'storybook-readme'
 import readme from './doc/Form.md'
 
-import {Form, Button, Select, Input, Checkbox} from '../src'
+import {Form, Button, Select, Input, Textarea, Checkbox} from '../src'
 
 storiesOf('pure.css', module)
   .add('Form (compact)', withReadme(readme, () => (
@@ -78,17 +78,17 @@ storiesOf('pure.css', module)
     <Form>
       <Form.Group>
         <Form.Group grouped>
-          <Input type='text' className='pure-input-1-2' placeholder='Username' />
-          <Input type='text' className='pure-input-1-2' placeholder='Password' />
-          <Input type='email' className='pure-input-1-2' placeholder='Email' />
+          <Input type='text' u='1-2' placeholder='Username' />
+          <Input type='text' u='1-2' placeholder='Password' />
+          <Input type='email' u='1-2' placeholder='Email' />
         </Form.Group>
 
         <Form.Group grouped>
-          <Input type='text' className='pure-input-1-2' placeholder='A title' />
-          <textarea className='pure-input-1-2' placeholder='Textareas work too' />
+          <Input type='text' u='1-2' placeholder='A title' />
+          <Textarea u='1-2' placeholder='Textareas work too' />
         </Form.Group>
 
-        <Button type='submit' className='pure-input-1-2' primary>Sign in</Button>
+        <Button type='submit' u='1-2' primary>Sign in</Button>
       </Form.Group>
     </Form>
   )))
