@@ -3,7 +3,12 @@ import classnames from 'classnames'
 
 import './Drawer.css'
 
-const content = 'drawer__content'
+// BEM styling
+const cn = 'drawer'
+const cnContent = `${cn}__content`
+const cnContentShow = `${cnContent}--show`
+const cnContentPosition = `${cnContent}--position`
+const cnBackdrop = `${cn}__backdrop`
 
 export default class Drawer extends Component {
   render () {
@@ -14,11 +19,11 @@ export default class Drawer extends Component {
       children
     } = this.props
 
-    const className = classnames(content, `${content}--position-${position}`, {[`${content}--show`]: show})
+    const className = classnames(cnContent, `${cnContentPosition}-${position}`, {[cnContentShow]: show})
 
     return (
-      <div className='drawer'>
-        {show && <div className='drawer__backdrop' onClick={(ev) => { onClose && onClose(ev) }} />}
+      <div className={cn}>
+        {show && <div className={cnBackdrop} onClick={(ev) => { onClose && onClose(ev) }} />}
         <div className={className} >
           {children}
         </div>

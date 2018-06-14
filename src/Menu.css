@@ -22,7 +22,6 @@
   border-left: 1px solid var(--pure-menu-divided--borderColor, rgb(238, 238, 238));
 }
 
-
 .pure-menu-children {
   background-color: var(--menu__children--backgroundColor, #fafafa);
 }

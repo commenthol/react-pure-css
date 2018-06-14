@@ -37,12 +37,16 @@ class DatalistControlled extends Component {
 }
 
 storiesOf('pure.css', module)
-  .add('Datalist', withReadme(readme, () => (
-    <Form stacked onSubmit={(ev, send) => action('submit')(submit(ev, send))}>
+  .add('Datalist', withReadme(readme, () => {
+    const onSubmit = (ev, send) => {
+      console.log(send)
+      action('submit')(submit(ev, send))
+    }
+    return <Form stacked onSubmit={onSubmit}>
       <Datalist
         label='required'
         name='uncontrolled'
-        autocomplete='off'
+        autoComplete='off'
         required
         options={options} />
 
@@ -56,16 +60,16 @@ storiesOf('pure.css', module)
       <DatalistControlled
         label='controlled'
         name='controlled'
-        autocomplete='off'
+        autoComplete='off'
         options={options} />
 
       <DatalistControlled
         label='controlled allowCreate'
         name='controlledAllowCreate'
-        autocomplete='off'
+        autoComplete='off'
         allowCreate
         options={options} />
 
       <Button>Submit</Button>
     </Form>
-  )))
+  }))

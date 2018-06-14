@@ -30,14 +30,10 @@ export default class Datalist extends Component {
   }
 
   _onChange (ev) {
-    const {onChange, allowCreate, options} = this.props
+    const {onChange, allowCreate, options, customValidity} = this.props
     const {value} = ev.target
     this._isValid = allowCreate || !value || !!~options.indexOf(value)
-    if (this._isValid) {
-      ev.target.setCustomValidity('')
-    } else {
-      ev.target.setCustomValidity('Select a value from the list')
-    }
+    ev.target.setCustomValidity(this._isValid ? '' : customValidity || 'Select a value from the list')
     onChange && onChange(ev, value, this._isValid)
   }
 
@@ -53,7 +49,7 @@ export default class Datalist extends Component {
   render () {
     const {
       allowCreate,
-      options: _options_, // filter out
+      options: _0, // filter out
       className,
       onBlur,
       ...other
