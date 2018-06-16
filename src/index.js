@@ -1,3 +1,4 @@
+export {default as Autocomplete} from './Autocomplete'
 export {default as Button} from './Button'
 export {default as ButtonGroup} from './ButtonGroup'
 export {default as Checkbox} from './Checkbox'

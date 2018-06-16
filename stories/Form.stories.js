@@ -9,7 +9,7 @@ import {Form, Button, Select, Input, Textarea, Checkbox, RadioButton} from '../s
 
 const onSubmit = (ev, send) => action('submit')(submit(ev, send))
 
-storiesOf('pure.css', module)
+storiesOf('pure.css/forms', module)
   .add('Form (compact)', withReadme(readme, () => (
     <Form onSubmit={onSubmit} action='/' method='POST'>
       <Form.Group>

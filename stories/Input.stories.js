@@ -8,7 +8,7 @@ const stop = (ev) => {
   ev.stopPropagation()
 }
 
-storiesOf('pure.css', module)
+storiesOf('pure.css/forms', module)
   .add('Input', () => (
     <div>
       <Form stacked onSubmit={stop}>

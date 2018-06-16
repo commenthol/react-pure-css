@@ -2,7 +2,11 @@
   "name": "@commenthol/react-pure-css",
   "version": "0.2.0",
   "description": "pure.css components for react",
-  "keywords": [],
+  "keywords": [
+    "pure-css",
+    "react",
+    "react-components"
+  ],
   "homepage": "https://github.com/commenthol/react-pure-css#readme",
   "bugs": {
     "url": "https://github.com/commenthol/react-pure-css/issues"
@@ -15,7 +19,8 @@
     "url": "git+https://github.com/commenthol/react-pure-css.git"
   },
   "scripts": {
-    "all": "npm run clean && npm run lint && npm run build && npm test",
+    "all": "npm run build && npm test",
+    "prebuild": "npm run clean && npm run lint",
     "build": "npm run clean && webpack -p",
     "build:dev": "webpack",
     "build:storybook": "build-storybook",
@@ -30,11 +35,11 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@storybook/addon-actions": "^3.4.3",
-    "@storybook/addon-links": "^3.4.3",
-    "@storybook/addon-viewport": "^3.4.3",
-    "@storybook/addons": "^3.4.3",
-    "@storybook/react": "^3.4.3",
+    "@storybook/addon-actions": "^3.4.7",
+    "@storybook/addon-options": "^3.4.7",
+    "@storybook/addon-viewport": "^3.4.7",
+    "@storybook/addons": "^3.4.7",
+    "@storybook/react": "^3.4.7",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
@@ -49,13 +54,13 @@
     "eslint-config-standard-react": "^6.0.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-react": "^7.8.2",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-react": "^7.9.1",
     "eslint-plugin-standard": "^3.1.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "postcss-loader": "^2.1.5",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "rimraf": "^2.6.2",
     "storybook-readme": "^3.3.0",
     "style-loader": "^0.21.0",
@@ -63,8 +68,8 @@
     "webpack-cli": "^2.1.3"
   },
   "peerDependencies": {
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   },
   "maintainers": [
     "commenthol <commenthol@gmail.com>"

@@ -7,7 +7,6 @@ dist/
 .nyc_output/
 *.log
 *.tgz
-yarn.lock
 package-lock.json
+yarn.lock
 storybook-static/
-

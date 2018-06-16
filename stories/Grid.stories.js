@@ -7,7 +7,7 @@ import './Grid.stories.css'
 import {Grid} from '../src'
 const {Unit} = Grid
 
-storiesOf('pure.css', module)
+storiesOf('pure.css/grid', module)
   .add('Grid', withReadme(readme, () => (
     <div>
       <h4>Normal Grid</h4>

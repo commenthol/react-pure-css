@@ -19,4 +19,3 @@ export const addUnit = (obj) =>
 
 export const randomId = (base = 'id') =>
   `${base}-${Math.random().toString(16).substr(2)}`
-

@@ -48,10 +48,11 @@ export default class Datalist extends Component {
 
   render () {
     const {
+      autoComplete = 'off',
       allowCreate,
-      options: _0, // filter out
       className,
       onBlur,
+      options: _0, // filter out
       ...other
     } = this.props
     const {
@@ -59,6 +60,7 @@ export default class Datalist extends Component {
     } = this.state
 
     Object.assign(other, {
+      autoComplete,
       list: this._id,
       onChange: this._onChange,
       onBlur: allowCreate ? onBlur : this._onBlur

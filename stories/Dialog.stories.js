@@ -5,7 +5,7 @@ import readme from './doc/Dialog.md'
 
 import {Dialog, Button} from '../src'
 
-storiesOf('pure.css', module)
+storiesOf('pure.css/ui', module)
   .add('Dialog', withReadme(readme, () => {
     class DialogContainer extends Component {
       constructor () {

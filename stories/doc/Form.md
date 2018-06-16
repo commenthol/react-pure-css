@@ -9,7 +9,7 @@ stacked   | bool     | stacked form
 className | string   | css class name of the element
 onSubmit  | function | `onSubmit(ev, send<object>)` wraps `onSubmit` and provides `send` object with `name`:`value` pairs of all form elements
 
-plus all attributes from [`<form>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
+plus all attributes from [`<form>`↗](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
 
 ## Usage
 

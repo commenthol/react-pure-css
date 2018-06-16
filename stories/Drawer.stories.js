@@ -7,7 +7,7 @@ import {stop} from './common'
 
 import {Drawer, Form, Input, Select, Button} from '../src'
 
-storiesOf('pure.css', module)
+storiesOf('pure.css/ui', module)
   .add('Drawer', withReadme(readme, () => {
     class DrawerContainer extends Component {
       constructor () {

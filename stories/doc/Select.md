@@ -10,7 +10,7 @@ value     | string,array | selected values (controlled)
 onChange  | function | onChange handler `(ev<Event>, values<Array>) => {}`
 className | string   | css class name of the element
 
-plus all attributes from [`<select>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
+plus all attributes from [`<select>`↗](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
 
 ## Usage
 

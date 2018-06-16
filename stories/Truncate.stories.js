@@ -5,7 +5,7 @@ import readme from './doc/Truncate.md'
 
 import {Truncate} from '../src'
 
-storiesOf('pure.css', module)
+storiesOf('pure.css/ui', module)
   .add('Truncate', withReadme(readme, () => {
     return (
       <Truncate>

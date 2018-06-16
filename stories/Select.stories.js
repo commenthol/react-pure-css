@@ -61,7 +61,7 @@ class SelectControlledMultiple extends Component {
   }
 }
 
-storiesOf('pure.css', module)
+storiesOf('pure.css/forms', module)
   .add('Select', withReadme(readme, () => (
     <div>
       <Form stacked>
