@@ -8,7 +8,7 @@ const stop = (ev) => {
   ev.stopPropagation()
 }
 
-storiesOf('pure.css', module)
+storiesOf('pure.css/forms', module)
   .add('Input', () => (
     <div>
       <Form stacked onSubmit={stop}>
@@ -23,6 +23,15 @@ storiesOf('pure.css', module)
           <Form.Message>readonly</Form.Message>
         </Form.Group>
         <Button primary onSubmit={stop}>Sign in</Button>
+      </Form>
+
+      <h4>lengths</h4>
+
+      <Form>
+        <Input u='1-4' placeholder="u='1-4'" /><br />
+        <Input u='1-2' placeholder="u='1-2'" /><br />
+        <Input u='3-4' placeholder="u='3-4'" /><br />
+        <Input u='1' placeholder="u='1'" /><br />
       </Form>
 
       <h4>rounded input</h4>

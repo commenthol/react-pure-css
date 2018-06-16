@@ -12,7 +12,7 @@ value     | string   | assigned value of checkbox
 disabled  | bool     | disabled
 className | string   | css class name of the element
 
-plus all attributes from [`<input type="checkbox">`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox).
+plus all attributes from [`<input type="checkbox">`↗](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox).
 
 ## Usage
 

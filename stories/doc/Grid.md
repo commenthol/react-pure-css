@@ -8,7 +8,7 @@ className | string   | css class name of the element
 
 # Unit
 
-Please refer to [pure.css grids](https://purecss.io/grids/) .
+Please refer to [pure.css grids↗](https://purecss.io/grids/) .
 
 ## Properties
 

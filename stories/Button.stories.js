@@ -6,7 +6,7 @@ import readmeButtonGroup from './doc/ButtonGroup.md'
 
 import {Button, ButtonGroup} from '../src'
 
-storiesOf('pure.css', module)
+storiesOf('pure.css/ui', module)
   .add('Button', withReadme(readmeButton, () => (
     <div>
       <p>

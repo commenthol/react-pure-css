@@ -1,49 +1,58 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 import { withReadme } from 'storybook-readme'
 import readme from './doc/Form.md'
+import {submit} from './common'
 
-import {Form, Button, Select, Input, Checkbox} from '../src'
+import {Form, Button, Select, Input, Textarea, Checkbox, RadioButton} from '../src'
 
-storiesOf('pure.css', module)
+const onSubmit = (ev, send) => action('submit')(submit(ev, send))
+
+storiesOf('pure.css/forms', module)
   .add('Form (compact)', withReadme(readme, () => (
-    <Form>
+    <Form onSubmit={onSubmit} action='/' method='POST'>
       <Form.Group>
         <legend>A compact inline form</legend>
 
-        <Input type='email' placeholder='Email' />&nbsp;
-        <Input type='password' placeholder='Password' />&nbsp;
+        <Input type='email' name='email' placeholder='Email' />&nbsp;
+        <Input type='password' name='password' placeholder='Password' />&nbsp;
 
-        <Checkbox id='remember'>Remember me</Checkbox>
+        <Checkbox name='remember' id='remember'>Remember me</Checkbox>
+
+        <RadioButton name='radiogroup' value='green' required>
+          green</RadioButton>
+        <RadioButton name='radiogroup' value='blue'>
+          blue</RadioButton>
 
         <Button type='submit' primary>Sign in</Button>
       </Form.Group>
     </Form>
   )))
   .add('Form (stacked)', withReadme(readme, () => (
-    <Form stacked>
+    <Form stacked onSubmit={onSubmit}>
       <Form.Group>
         <legend>A Stacked Form</legend>
 
-        <Input label='Email' id='email' type='email' placeholder='Email' />
+        <Input label='Email' name='email' type='email' placeholder='Email' />
         <Form.Message>This is a required field.</Form.Message>
 
-        <Input label='Password' id='password' type='password' placeholder='Password' />
+        <Input label='Password' name='password' type='password' placeholder='Password' />
 
-        <Select label='State' id='state'>
+        <Select label='State' name='state'>
           <option>AL</option>
           <option>CA</option>
           <option>IL</option>
         </Select>
 
-        <Checkbox id='remember'>Remember me</Checkbox>
+        <Checkbox name='remember'>Remember me</Checkbox>
 
         <Button type='submit' primary>Sign in</Button>
       </Form.Group>
     </Form>
   )))
   .add('Form (aligned)', withReadme(readme, () => (
-    <Form aligned>
+    <Form aligned onSubmit={onSubmit}>
       <Form.Group aligned>
         <Form.ControlGroup>
           <label htmlFor='name'>Username</label>
@@ -68,27 +77,27 @@ storiesOf('pure.css', module)
         </Form.ControlGroup>
 
         <Form.Controls>
-          <Checkbox>I have read the terms and conditions</Checkbox>
+          <Checkbox name='terms'>I have read the terms and conditions</Checkbox>
           <Button type='submit' primary>Submit</Button>
         </Form.Controls>
       </Form.Group>
     </Form>
   )))
   .add('Form (grouped)', withReadme(readme, () => (
-    <Form>
+    <Form onSubmit={onSubmit}>
       <Form.Group>
         <Form.Group grouped>
-          <Input type='text' className='pure-input-1-2' placeholder='Username' />
-          <Input type='text' className='pure-input-1-2' placeholder='Password' />
-          <Input type='email' className='pure-input-1-2' placeholder='Email' />
+          <Input name='username' type='text' u='1-2' placeholder='Username' />
+          <Input name='password' type='text' u='1-2' placeholder='Password' />
+          <Input name='email' type='email' u='1-2' placeholder='Email' />
         </Form.Group>
 
         <Form.Group grouped>
-          <Input type='text' className='pure-input-1-2' placeholder='A title' />
-          <textarea className='pure-input-1-2' placeholder='Textareas work too' />
+          <Input name='title' type='text' u='1-2' placeholder='A title' />
+          <Textarea name='text' u='1-2' placeholder='Textareas work too' />
         </Form.Group>
 
-        <Button type='submit' className='pure-input-1-2' primary>Sign in</Button>
+        <Button type='submit' u='1-2' primary>Sign in</Button>
       </Form.Group>
     </Form>
   )))

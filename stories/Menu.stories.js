@@ -30,7 +30,7 @@ const MenuListTest = (
   </Menu.List>
 )
 
-storiesOf('pure.css', module)
+storiesOf('pure.css/ui', module)
   .add('Menu', withReadme(readme, () => (
     <div>
       <Menu className='menu_restriced_width'>

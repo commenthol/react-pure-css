@@ -13,7 +13,7 @@ value     | string   | value of radio button
 disabled  | bool     | disabled
 className | string   | css class name of the element
 
-plus all attributes from [`<input type="radio">`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/radio).
+plus all attributes from [`<input type="radio">`↗](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/radio).
 
 ## Usage
 

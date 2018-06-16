@@ -1,16 +1,8 @@
-# Datalist
+# Autocomplete
 
-Renders a input field based on [`<datalist>`↗](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)
+Renders a input field with similar behavior as [`<datalist>`↗ ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)
 
-This component won't work so far in
-- Safari
-- Opera Mini
-- UC Browser
-- Firefox Mobile
-
-Maybe you like to take a look at
-- [`<Autocomplete>`](/?selectedKind=pure.css%2Fforms&selectedStory=Autocomplete)
-- [react-select↗](https://www.npmjs.com/package/react-select)
+Requires javascript in browser! (For the paranoid and those which like to perform serverside rendering). Use [`<Datalist>`](/?selectedKind=pure.css%2Fforms&selectedStory=Datalist) for such cases. The API is identically.
 
 ## Properties
 
@@ -19,8 +11,8 @@ Name      | Type     | Description
 label     | string, node | label for input
 options   | array    | Array of options<br> `['string1', 'string2', ...]`
 allowCreate | bool   | allow creating new values
+autoComplete | [string='off'] | set to `autoComplete='off'` as IE11, Edge, FF render ugly after input.
 onChange  | function | onChange handler `(ev, value, isValid) => {}`
-  autoComplete | [string='off'] | set to `autoComplete='off'` as IE11, Edge render ugly after input.
 className | string   | css class name of the element
 
 plus all attributes from [`<input>`↗](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
@@ -30,7 +22,7 @@ If `allowCreate` is not set, an option value should be selected. In case the val
 ## Usage
 
 ```js
-import {Datalist} from '@commenthol/react-pure-css'
+import {Autocomplete} from '@commenthol/react-pure-css'
 
 const options = [
   'Apple',
@@ -41,13 +33,13 @@ const options = [
 render () {
   return (
     <Form>
-      <Datalist
+      <Autocomplete
         label='uncontrolled required'
         name='uncontrolled'
         required
         options={options} />
 
-      <Datalist
+      <Autocomplete
         label='controlled allowCreate'
         name='controlledAllowCreate'
         allowCreate

@@ -40,7 +40,7 @@ const tableBody = (
   </tbody>
 )
 
-storiesOf('pure.css', module)
+storiesOf('pure.css/ui', module)
   .add('Table', withReadme(readme, () => (
     <div className='body'>
       <Table>

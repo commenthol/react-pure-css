@@ -30,14 +30,10 @@ export default class Datalist extends Component {
   }
 
   _onChange (ev) {
-    const {onChange, allowCreate, options} = this.props
+    const {onChange, allowCreate, options, customValidity} = this.props
     const {value} = ev.target
     this._isValid = allowCreate || !value || !!~options.indexOf(value)
-    if (this._isValid) {
-      ev.target.setCustomValidity('')
-    } else {
-      ev.target.setCustomValidity('Select a value from the list')
-    }
+    ev.target.setCustomValidity(this._isValid ? '' : customValidity || 'Select a value from the list')
     onChange && onChange(ev, value, this._isValid)
   }
 
@@ -52,10 +48,11 @@ export default class Datalist extends Component {
 
   render () {
     const {
+      autoComplete = 'off',
       allowCreate,
-      options: _options_, // filter out
       className,
       onBlur,
+      options: _0, // filter out
       ...other
     } = this.props
     const {
@@ -63,6 +60,7 @@ export default class Datalist extends Component {
     } = this.state
 
     Object.assign(other, {
+      autoComplete,
       list: this._id,
       onChange: this._onChange,
       onBlur: allowCreate ? onBlur : this._onBlur

@@ -9,7 +9,7 @@ horizontal | bool    | horizontal bordered
 striped   | bool     | with stripes
 className | string   | css class name of the element
 
-plus all attributes from [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table).
+plus all attributes from [`<table>`↗](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table).
 
 ## Usage
 

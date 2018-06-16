@@ -2,10 +2,10 @@ import React, {Component} from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withReadme } from 'storybook-readme'
-import readme from './doc/Datalist.md'
+import readme from './doc/Autocomplete.md'
 import {submit} from './common'
 
-import {Datalist, Form, Button} from '../src'
+import {Form, Button, Autocomplete} from '../src'
 
 const options = [
   'Apple',
@@ -19,14 +19,14 @@ const options = [
   'Üɱläut'
 ]
 
-class DatalistControlled extends Component {
+class AutocompleteControlled extends Component {
   constructor (props) {
     super(props)
     this.state = { value: '' }
   }
   render () {
     return (
-      <Datalist
+      <Autocomplete
         {...this.props}
         value={this.state.value}
         onChange={(ev, value, isValid) => {
@@ -38,35 +38,37 @@ class DatalistControlled extends Component {
 }
 
 storiesOf('pure.css/forms', module)
-  .add('Datalist', withReadme(readme, () => {
+  .add('Autocomplete', withReadme(readme, () => {
     const onSubmit = (ev, send) => {
       console.log(send)
       action('submit')(submit(ev, send))
     }
     return <Form stacked onSubmit={onSubmit}>
-      <Datalist
+      <Autocomplete
+        autoFocus
         label='required'
         name='uncontrolled'
+        defaultValue='a'
         required
         options={options} />
 
-      <Datalist
+      <Autocomplete
         label='allowCreate required'
         name='uncontrolledAllowCreate'
         allowCreate required
         options={options} />
 
-      <DatalistControlled
+      <AutocompleteControlled
         label='controlled'
         name='controlled'
         options={options} />
 
-      <DatalistControlled
+      <AutocompleteControlled
         label='controlled allowCreate'
         name='controlledAllowCreate'
         allowCreate
         options={options} />
 
-      <Button>Submit</Button>
+      <Button onSubmit={onSubmit}>Submit</Button>
     </Form>
   }))

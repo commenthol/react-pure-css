@@ -1,6 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
-import {addClass} from './helpers'
+import {addClass, addUnit} from './helpers'
 
 import '../css/base.css'
 import '../css/buttons.css'
@@ -14,6 +14,7 @@ const _addClassSize = addClassSize(buttonClass)
 
 export default function Button (props) {
   const {
+    u,
     primary,
     secondary,
     active,
@@ -25,7 +26,8 @@ export default function Button (props) {
     className,
     buttonClass,
     _addClass({primary, secondary, active}),
-    _addClassSize(size)
+    _addClassSize(size),
+    addUnit({u})
   )
   return (
     <button {...other}>

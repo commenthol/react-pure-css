@@ -17,7 +17,7 @@ export default class Portal extends Component {
 
   render () {
     const {
-      container, // filter out...
+      container,
       children,
       ...other
     } = this.props

@@ -40,7 +40,7 @@ class CheckboxControlled extends Component {
   }
 }
 
-storiesOf('pure.css', module)
+storiesOf('pure.css/forms', module)
   .add('Checkbox', withReadme(readme, () => (
     <div>
       <Form onSubmit={stop}>

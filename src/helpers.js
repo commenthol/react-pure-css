@@ -17,4 +17,5 @@ export const addUnit = (obj) =>
     return arr
   }, [])
 
-export const randomId = (base = 'id') => `${base}-${Math.random().toString(16).substr(2)}`
+export const randomId = (base = 'id') =>
+  `${base}-${Math.random().toString(16).substr(2)}`
