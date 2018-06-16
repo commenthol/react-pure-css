@@ -40,7 +40,6 @@ class AutocompleteControlled extends Component {
 storiesOf('pure.css/forms', module)
   .add('Autocomplete', withReadme(readme, () => {
     const onSubmit = (ev, send) => {
-      console.log(send)
       action('submit')(submit(ev, send))
     }
     return <Form stacked onSubmit={onSubmit}>
