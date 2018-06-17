@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
 import classnames from 'classnames'
-import {addUnit} from './helpers'
+import {
+  addUnit,
+  uaIEorEdge
+} from './helpers'
 
 import Input from './Input'
 import './Autocomplete.css'
@@ -28,7 +31,7 @@ export default class Autocomplete extends Component {
         show: false,
         value: props.value || props.defaultValue || '', // value to display in input
         filtered: [], // filtered list of matching options
-        selected: 0
+        selected: -1
       },
       _isValid: false,
       _click: 0
@@ -44,7 +47,6 @@ export default class Autocomplete extends Component {
 
   _update () {
     const onClick = (value) => () => {
-      console.log('onClick', value)
       this._target.focus()
       this.setState({value, show: false})
     }
@@ -77,13 +79,13 @@ export default class Autocomplete extends Component {
     this._target.setCustomValidity(this._isValid ? '' : customValidity || 'Select a value from the list')
   }
 
-  _onChange (ev) {
+  _onChange (ev, show = true) {
     this._target = ev.target
     const {onChange} = this.props
     const {value} = this._target
     this._valid(value)
     onChange && onChange(ev, value, this._isValid)
-    this.setState({value, show: true})
+    this.setState({value, show}) // show dropdown while typing
   }
 
   _onKeyDown (ev) {
@@ -93,12 +95,19 @@ export default class Autocomplete extends Component {
 
     switch (ev.key) {
       case 'Enter':
-        if (show) { // don't sumbit form on select
+        if (show) { // don't submit form on select
           ev.preventDefault()
           value = filtered[selected] || value
           this._valid(value)
         }
         this.setState({show: false, value})
+        return
+      case 'Tab': // select selected if value is empty
+        if (show && !value) { // don't submit form on select
+          value = filtered[selected] || value
+          this._valid(value)
+        }
+        this.setState({ show: false, value })
         return
       case 'Escape':
         show = false
@@ -110,6 +119,7 @@ export default class Autocomplete extends Component {
         if (show) {
           selected = Math.min(length ? length - 1 : 0, selected + 1)
         } else {
+          selected = -1
           show = true
         }
         break
@@ -122,13 +132,12 @@ export default class Autocomplete extends Component {
   }
 
   _onBlur (ev) {
-    console.log('blur', this._show)
     const {onBlur} = this.props
     this._target = ev.target
 
     if (!this._isValid) {
       this.state.value = this._target.value = ''
-      this._onChange(ev)
+      this._onChange(ev, false) // keep dropdown closed
     }
     onBlur && onBlur(ev)
     setTimeout(() => {
@@ -147,6 +156,7 @@ export default class Autocomplete extends Component {
     const state = {show: true}
     if (this.state.value) {
       state.value = ''
+      state.selected = -1 // reset selection
     }
     this._show = true // keep dropdown open after onBlur event
     this._target.focus()
@@ -193,10 +203,16 @@ export default class Autocomplete extends Component {
 
     if (!show) this._click = 0
 
+    const icon = !value
+      ? '\u25BE' // ▾
+      : !uaIEorEdge // edge, ie already show x in input
+        ? '\u2715' // ✕
+        : ''
+
     return (
       <div className='autocomplete'>
         <Input {...other} />
-        <span className={_cnDrop} onClick={this._onDelete}>{value ? '\u2715' : '\u25BC'}</span>
+        <span className={_cnDrop} onClick={this._onDelete}>{icon}</span>
         <ul className={_cnOptions} >
           {this._update()}
         </ul>

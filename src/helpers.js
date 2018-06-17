@@ -19,3 +19,9 @@ export const addUnit = (obj) =>
 
 export const randomId = (base = 'id') =>
   `${base}-${Math.random().toString(16).substr(2)}`
+
+// simple ua tests
+const {userAgent = ''} = navigator
+export const uaIE = /\bTrident\//.test(userAgent)
+export const uaEdge = /\bEdge\//.test(userAgent)
+export const uaIEorEdge = uaIE || uaEdge

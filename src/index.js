@@ -1,3 +1,8 @@
+/*!
+ * @commenthol/react-pure-css
+ * license MIT
+ * copyright 2018- commenthol
+ */
 export {default as Autocomplete} from './Autocomplete'
 export {default as Button} from './Button'
 export {default as ButtonGroup} from './ButtonGroup'

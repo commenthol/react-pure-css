@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const isProd = process.env.NODE_ENV === 'production' || ~process.argv.indexOf('-p')
@@ -13,7 +14,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   },
-  devtool: isProd ? 'eval' : 'source-map',
+  devtool: isProd ? 'none' : 'source-map',
   externals: {
     classnames: 'classnames',
     react: 'react',
@@ -45,7 +46,13 @@ module.exports = {
     }
     ]
   },
-  plugins: [new ExtractTextPlugin('pure.css')],
+  plugins: [
+    new ExtractTextPlugin('pure.css'),
+    new webpack.BannerPlugin({
+      banner: '@commenthol/react-pure-css\nlicense MIT\ncopyright 2018- commenthol',
+      entryOnly: true
+    })
+  ],
   performance: {
     hints: false
   }

@@ -2,7 +2,8 @@
   "extends": ["standard", "standard-react"],
   "parser": "babel-eslint",
   "rules": {
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "no-console": "error"
   },
   "env": {
     "browser": true,

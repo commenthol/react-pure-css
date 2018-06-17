@@ -1,9 +1,10 @@
 {
   "name": "@commenthol/react-pure-css",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "pure.css components for react",
   "keywords": [
     "pure-css",
+    "pure.css",
     "react",
     "react-components"
   ],
@@ -21,7 +22,7 @@
   "scripts": {
     "all": "npm run build && npm test",
     "prebuild": "npm run clean && npm run lint",
-    "build": "npm run clean && webpack -p",
+    "build": "npm run clean && webpack && webpack -p",
     "build:dev": "webpack",
     "build:storybook": "build-storybook",
     "clean": "rimraf dist",
