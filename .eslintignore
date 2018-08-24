@@ -4,3 +4,4 @@ docs*/
 scripts/jsdoc/*
 tmp/
 lib/
+storybook-static/
