@@ -48,6 +48,7 @@ export default class Autocomplete extends Component {
   _update () {
     const onClick = (value) => () => {
       this._target.focus()
+      this._valid()
       this.setState({value, show: false})
     }
     const {options} = this.props
@@ -135,12 +136,11 @@ export default class Autocomplete extends Component {
     const {onBlur} = this.props
     this._target = ev.target
 
-    if (!this._isValid) {
-      this.state.value = this._target.value = ''
-      this._onChange(ev, false) // keep dropdown closed
-    }
     onBlur && onBlur(ev)
     setTimeout(() => {
+      if (!this._isValid) {
+        this.state.value = this._target.value = ''
+      }
       !this._show && this.setState({show: false})
       this._show = false
     }, 250) // need this timeout for click on option
@@ -205,7 +205,7 @@ export default class Autocomplete extends Component {
 
     const icon = !value
       ? '\u25BE' // ▾
-      : !uaIEorEdge // edge, ie already show x in input
+      : !uaIEorEdge // edge, ie already shows `x` in input
         ? '\u2715' // ✕
         : ''
 
